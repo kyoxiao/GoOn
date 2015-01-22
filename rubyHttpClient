@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'httpclient'
+ 
+hc = HTTPClient.new
+query = "Tokyo Station"
+html = hc.get_content("http://www.geocoding.jp/api", "q"=>query)
+puts html
